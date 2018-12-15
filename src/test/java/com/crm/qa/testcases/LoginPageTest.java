@@ -25,7 +25,7 @@ public class LoginPageTest extends TestBase
 		loginPage=new LoginPage();
 	}
 	
-	@Test(retryAnalyzer=com.crm.qa.Analyzer.RetryAnalyzer.class)
+	@Test()
 	public void loginPageTitleTest()
 	{
 		String title=loginPage.validateLoginPageTitle();
