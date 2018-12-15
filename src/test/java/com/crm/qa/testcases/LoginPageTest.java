@@ -25,11 +25,11 @@ public class LoginPageTest extends TestBase
 		loginPage=new LoginPage();
 	}
 	
-	@Test()
+	@Test(retryAnalyzer=com.crm.qa.Analyzer.RetryAnalyzer.class)
 	public void loginPageTitleTest()
 	{
 		String title=loginPage.validateLoginPageTitle();
-		Assert.assertEquals(title, "#1 Free CRM software in the cloud for sales and service");
+		Assert.assertEquals(title, "#12 Free CRM software in the cloud for sales and service");
 	}
 	
 	@Test()
