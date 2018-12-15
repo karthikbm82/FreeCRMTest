@@ -21,7 +21,7 @@
 
 	<listeners>
 		<listener class-name="com.crm.qa.ExtentReportListener.ExtentReporterNG" />
-		<listener class-name="Analyzer.MyTransformer"/>
+		<listener class-name="com.crm.qa.Analyzer.MyTransformer"/>
 	</listeners>
 
 
