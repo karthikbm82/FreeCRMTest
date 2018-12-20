@@ -1,5 +1,6 @@
 package com.crm.qa.testcases;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,6 +14,7 @@ public class LoginPageTest extends TestBase
 {
 	LoginPage loginPage;
 	HomePage homePage;
+	Logger log=Logger.getLogger(LoginPageTest.class);
 	public LoginPageTest()
 	{
 		super();
@@ -22,6 +24,7 @@ public class LoginPageTest extends TestBase
 	public void setup()
 	{
 		initialization();
+		log.info("Initialization is done ! ");
 		loginPage=new LoginPage();
 	}
 	
@@ -29,6 +32,7 @@ public class LoginPageTest extends TestBase
 	public void loginPageTitleTest()
 	{
 		String title=loginPage.validateLoginPageTitle();
+		log.info("Login page title is : "+title);
 		Assert.assertEquals(title, "#1 Free CRM software in the cloud for sales and service");
 	}
 	
@@ -36,6 +40,7 @@ public class LoginPageTest extends TestBase
 	public void crmLogoImageTest()
 	{
 		boolean flag=loginPage.validateCRMImage();
+		log.info("Logo is present "+flag);
 		Assert.assertTrue(flag);
 	}
 	
